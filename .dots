@@ -58,9 +58,7 @@ function runDots() {
             echo 'eval "$(rbenv init -)"' >> ~/Projects/config/env.sh
            source ~/.zshrc # Apply changes
            gem install bundler
-           echo 'bundler' >> "$(brew --prefix rbenv)/default-gems"
-           echo '.gems' > <my_project_path>/.rbenv-gemsets
-           echo 'gem: --no-document' >> ~/.gemrc
+           echo 'bundler' >> "$(brew --prefix rbenv)/default-gems"      
            brew install rustup
            brew install node
            brew install go
@@ -71,7 +69,7 @@ function runDots() {
            brew install docker docker-machine
            brew install --cask mactex
            brew install --cask basictex
-           
+
         fi
         if [ $ARG == "osx" ] || [ $ARG == "all" ]; then
             # Run the osx.sh Script
