@@ -40,6 +40,38 @@ function runDots() {
             echo "------------------------------"
             echo ""
             ./brew.sh
+            brew install --cask visual-studio-code
+            brew tap railwaycat/emacsmacport
+            brew install --cask emacs-mac
+            brew install vim
+            brew install git
+            git clone https://github.com/amix/vimrc.git ~/.vim_runtime
+            sh ~/.vim_runtime/install_awesome_vimrc.sh
+            brew install --cask visual-studio-code
+            brew install postgres
+            brew install python
+            pip install --upgrade setuptools
+            pip install --upgrade pip
+            brew install openjdk
+            curl -s "https://get.sdkman.io" | bash
+            brew install rbenv ruby-build rbenv-default-gems rbenv-gemset
+            echo 'eval "$(rbenv init -)"' >> ~/Projects/config/env.sh
+           source ~/.zshrc # Apply changes
+           gem install bundler
+           echo 'bundler' >> "$(brew --prefix rbenv)/default-gems"
+           echo '.gems' > <my_project_path>/.rbenv-gemsets
+           echo 'gem: --no-document' >> ~/.gemrc
+           brew install rustup
+           brew install node
+           brew install go
+           brew install heroku/brew/heroku
+           brew install --cask virtualbox
+           brew install --cask vagrant
+           brew install --cask vagrant-manager
+           brew install docker docker-machine
+           brew install --cask mactex
+           brew install --cask basictex
+           
         fi
         if [ $ARG == "osx" ] || [ $ARG == "all" ]; then
             # Run the osx.sh Script
